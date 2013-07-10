@@ -5,12 +5,10 @@ var fs = requiere('fs');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-//  var data = fs.readFileSync('index.html',"utf8");
+  var data = fs.readFileSync('index.html',"utf8");
 
-//  var buffer = new Buffer(data);
-
-//  response.send(buffer.toString());
-    response.send("HOla");
+// response.send(buffer.toString());
+   response.send(data);
 
 });
 
